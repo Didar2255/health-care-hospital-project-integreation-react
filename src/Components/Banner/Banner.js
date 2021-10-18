@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import img1 from '../../Images/Banner/doctor-with-stethoscope-baby-without-clothes-examination-by-doctor.jpg'
-import img2 from '../../Images/Banner/elderly-female-smiling-with-doctor-visiting-senior-patient-woman-hospital-ward.jpg'
-import img3 from '../../Images/Banner/nurse-measuring-patient-blood-pressure.jpg'
+import img1 from '../../Images/Banner/banner_physicians.jpg'
+import img2 from '../../Images/Banner/doctors-banner.jpg'
+import img3 from '../../Images/Banner/banner-img4.jpg'
 import './Banner.css'
 
 const Banner = () => {
@@ -33,11 +33,11 @@ const Banner = () => {
 
                 <Carousel.Caption>
                     <div className="d-flex align-items-center justify-content-between">
-                        <div></div>
                         <div>
                             <h2 className='text-dark'>Extra Care of all pataint</h2>
                             <h1 className='text-dark'> Happy health Happy World !!</h1>
                         </div>
+                        <div></div>
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -50,11 +50,12 @@ const Banner = () => {
 
                 <Carousel.Caption>
                     <div className="d-flex align-items-center justify-content-between">
-                        <div className=""></div>
-                        <div className="banner-title">
-                            <h2 >Help all kind of People</h2>
-                            <h1 >Medical work </h1>
+                        <div>
+                            <h2 className='text-dark' >Help all kind of People</h2>
+                            <h1 className='text-dark' >Medical work </h1>
                         </div>
+                        <div className=""></div>
+
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>
