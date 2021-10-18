@@ -6,6 +6,7 @@ import Services from './Page/Services/Services';
 import FindDoctor from './Page/FindDoctor/FindDoctor'
 import Header from './Components/Header/Header';
 import About from './Page/About/About';
+import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path='/home'>
             <Home></Home>
+          </Route>
+          <Route path='/SingleService/:id'>
+            <ServiceDetails></ServiceDetails>
           </Route>
           <Route path='/services'>
             <Services></Services>

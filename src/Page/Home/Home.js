@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Banner from '../../Components/Banner/Banner';
+import QuestionAns from '../../Components/QuestionAns/QuestionAns';
 import SingleService from '../../Components/SingleService/SingleService';
+import './Home.css'
 
 const Home = () => {
     const [services, setServices] = useState([])
@@ -14,16 +16,22 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Container>
-                <h1>Our Services</h1>
-                <Row xs={1} md={3} ms={12} className="g-4">
-                    {
-                        services.map(service => <SingleService
-                            key={service.id}
-                            service={service}
-                        ></SingleService>)
-                    }
-                </Row>
+                <div className='my-5'>
+                    <h1>Our Services</h1>
+                </div>
+                <div className="my-5">
+                    <Row xs={1} md={3} ms={12} className="g-4">
+                        {
+                            services.map(service => <SingleService
+                                key={service.id}
+                                service={service}
+                            ></SingleService>)
+                        }
+                    </Row>
+                </div>
+                <QuestionAns></QuestionAns>
             </Container>
+
         </div>
     );
 };
