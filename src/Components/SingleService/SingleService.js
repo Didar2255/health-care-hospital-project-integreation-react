@@ -8,7 +8,7 @@ const SingleService = (props) => {
     const url = `/SingleService/${id}`
     return (
         <Col>
-            <Card className='home-card'>
+            <Card className='home-card border-0'>
                 <Card.Img variant="top" src={serviceImg} />
                 <Card.Body>
                     <Card.Title>{serviceName}</Card.Title>
