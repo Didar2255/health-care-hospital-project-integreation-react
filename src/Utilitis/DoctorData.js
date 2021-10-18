@@ -8,4 +8,3 @@ const doctorData = [
     { id: 307, doctorName: 'Dr.Farhana khan', doctorImg: 'https://i.ibb.co/hCzRSsZ/team-06.jpg', position: 'MBBS of Medicine,Dhaka' },
     { id: 307, doctorName: 'Dr.Fawzia Hossin', doctorImg: 'https://i.ibb.co/MSqSdw4/team-07.jpg', position: 'MBBS ,BSC(Health),Singapore' }
 ]
-

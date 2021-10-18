@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 const services = [
     { id: '201', serviceName: 'ECG', serviceImg: 'https://i.ibb.co/j5nmPRv/240-F-159721069-gxr-Vs3k4-DOkj98-SUm-Xz-Sw-UNJt72v9csf-min.jpg', rating: '4', price: 102 },
     { id: '202', serviceName: 'Pathology', serviceImg: 'https://i.ibb.co/QFh8yz7/scientist-putting-blood-sample-from-test-tube-with-micropipette-petri-dish-analysing-chemical-reacti.jpg', rating: '4.2', price: 89 },

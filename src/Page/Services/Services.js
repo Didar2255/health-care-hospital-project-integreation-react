@@ -25,9 +25,9 @@ const Services = () => {
             </Container>
             <div className="information d-flex align-items-center justify-content-around my-5">
                 <div></div>
-                <div className='ms-5'>
+                <div className='service-info'>
                     <h1>TAKE A LOOK AT OUR HEALTH</h1>
-                    <Button variant='btn btn-danger p-2 rounded '>Join Our Family <i class="fas fa-arrow-alt-circle-right"></i></Button>
+                    <Button variant='btn btn-danger p-2 rounded '>Join Our Family <i className="fas fa-arrow-alt-circle-right"></i></Button>
                 </div>
             </div>
         </div>

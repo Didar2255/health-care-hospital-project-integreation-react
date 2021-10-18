@@ -26,14 +26,14 @@
     {
         "id": 305,
         "doctorName": "Dr. Shamim Boksha",
-        "doctorImg": "",
+        "doctorImg": "https://i.ibb.co/25PbKVR/team-05.jpg",
         "position": "FRCOG of ECG,London"
     },
     {
         "id": 306,
         "doctorName": "Prof. Dr.Nasrin Hossin",
-        "doctorImg": "https://i.ibb.co/25PbKVR/team-05.jpg",
-        "position": "FCPS (Obs & Gyne) of Gynecological,Garman"
+        "doctorImg": "https://i.ibb.co/1X65GN3/team-08.jpg",
+        "position": "FCPS of Gynecological,Garman"
     },
     {
         "id": 307,
@@ -42,7 +42,7 @@
         "position": "MBBS of Medicine,Dhaka"
     },
     {
-        "id": 307,
+        "id": 308,
         "doctorName": "Dr.Fawzia Hossin",
         "doctorImg": "https://i.ibb.co/MSqSdw4/team-07.jpg",
         "position": "MBBS ,BSC(Health),Singapore"

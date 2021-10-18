@@ -1,10 +1,10 @@
 .icon{
     color: rgb(230, 158, 24);
 }
-.card{
+.service-card{
     border: none;
 }
-.card:hover{
+.service-card:hover{
     box-shadow: 0rem 0rem 0.5rem 0.3rem rgb(0,0,0,0.1);
     transform: scale(1.02);
 }
