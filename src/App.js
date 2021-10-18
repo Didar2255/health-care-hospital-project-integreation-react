@@ -7,6 +7,7 @@ import FindDoctor from './Page/FindDoctor/FindDoctor'
 import Header from './Components/Header/Header';
 import About from './Page/About/About';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <About></About>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );
