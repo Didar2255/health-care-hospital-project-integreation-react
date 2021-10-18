@@ -37,7 +37,7 @@ const QuestionAns = () => {
                                 As Long as you have symptoms.Your ability to spread these viruses remains until the last sniffle.And you're contagious 24 hours before you first show symptoms.
                             </Accordion.Body>
                         </Accordion.Item>
-                        <Button variant='btn border-0 btn-danger rounded-pill my-2 button p-3'>More Information is Here <i class="far fa-arrow-alt-circle-right"></i> </Button>
+                        <Button className='button'>More Information is Here <i class="far fa-arrow-alt-circle-right"></i> </Button>
                     </Accordion>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import Appointment from '../../Components/Appointment/Appointment';
 import Banner from '../../Components/Banner/Banner';
 import QuestionAns from '../../Components/QuestionAns/QuestionAns';
 import SingleService from '../../Components/SingleService/SingleService';
@@ -30,6 +31,7 @@ const Home = () => {
                     </Row>
                 </div>
                 <QuestionAns></QuestionAns>
+                <Appointment></Appointment>
             </Container>
 
         </div>

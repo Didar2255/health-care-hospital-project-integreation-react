@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './Header.css'
 const Header = () => {
     return (
-        <Navbar bg="light" variant="light">
+        <Navbar bg="light" variant="light" collapseOnSelect expand="md">
             <Container>
                 <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                 <Nav className="ms-auto menu-bar">
