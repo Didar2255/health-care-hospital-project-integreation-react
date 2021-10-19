@@ -10,6 +10,7 @@ const useFirebase = () => {
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
     const [users, setUsers] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
     const googleProvider = new GoogleAuthProvider()
     const auth = getAuth()
 
@@ -24,11 +25,11 @@ const useFirebase = () => {
     }
     const hendelRegistration = (e) => {
         e.preventDefault()
-        console.log(email, password)
         if (password.length < 6) {
             setError('Password must at list 6 Character !!')
             return;
         }
+        setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setError('')
@@ -38,6 +39,7 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message)
             })
+            .finally(() => setIsLoading(false))
     }
     const processLogIn = (e) => {
         e.preventDefault()
@@ -45,6 +47,7 @@ const useFirebase = () => {
             setError('Password must at list 6 Character !!')
             return;
         }
+        setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setError('')
@@ -52,6 +55,7 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message)
             })
+            .finally(() => setIsLoading(false))
 
     }
     const setUserName = () => {
@@ -69,14 +73,12 @@ const useFirebase = () => {
             .then(result => { })
     }
     const googleLogIn = () => {
+        setIsLoading(true)
         signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUsers(result.user)
-
-            })
             .catch(error => {
                 setError(error.message)
             })
+            .finally(() => setIsLoading(false))
     }
     useEffect(() => {
         onAuthStateChanged(auth, users => {
@@ -84,18 +86,21 @@ const useFirebase = () => {
                 setUsers(users)
             }
             else {
-
+                setUsers({})
             }
+            setIsLoading(false)
         })
     }, [])
     const hendelSignOut = () => {
+        setIsLoading(true)
         signOut(auth)
             .then(result => {
                 setUsers({})
             })
+            .finally(() => setIsLoading(false))
     }
 
-    return { hendelEmailChange, hendelPasswordChange, processLogIn, hendelRegistration, hendelResetPassword, hendelNameChange, error, googleLogIn, hendelSignOut, users }
+    return { hendelEmailChange, hendelPasswordChange, processLogIn, hendelRegistration, hendelResetPassword, hendelNameChange, error, googleLogIn, hendelSignOut, users, isLoading }
 
 }
 export default useFirebase;

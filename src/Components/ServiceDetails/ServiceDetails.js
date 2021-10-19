@@ -15,7 +15,6 @@ const ServiceDetails = () => {
     }, [])
     useEffect(() => {
         const value = service.find(serviceDetails => serviceDetails.id === parseInt(id))
-        console.log(value)
         setSingleService(value)
 
     }, [service])

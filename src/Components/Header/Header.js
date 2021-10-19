@@ -6,7 +6,6 @@ import useAuth from '../Hooks/useAuth';
 import './Header.css'
 const Header = () => {
     const { users, hendelSignOut } = useAuth()
-    console.log(users)
     return (
         <Navbar bg="dark" variant="dark" collapseOnSelect expand="md">
             <Container>
