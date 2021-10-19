@@ -1,6 +1,6 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication()
@@ -78,6 +78,16 @@ const useFirebase = () => {
                 setError(error.message)
             })
     }
+    useEffect(() => {
+        onAuthStateChanged(auth, users => {
+            if (users) {
+                setUsers(users)
+            }
+            else {
+
+            }
+        })
+    }, [])
     const hendelSignOut = () => {
         signOut(auth)
             .then(result => {

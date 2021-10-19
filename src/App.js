@@ -12,6 +12,7 @@ import NotFound from './Page/NotFound/NotFound';
 import LogIn from './Page/LogIn/LogIn';
 import Register from './Components/Register/Register';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
+import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 
 function App() {
   return (
@@ -26,15 +27,15 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
-            <Route path='/SingleService/:id'>
+            <PrivetRoute path='/SingleService/:id'>
               <ServiceDetails></ServiceDetails>
-            </Route>
-            <Route path='/services'>
+            </PrivetRoute>
+            <PrivetRoute path='/services'>
               <Services></Services>
-            </Route>
-            <Route path='/doctor'>
+            </PrivetRoute>
+            <PrivetRoute path='/doctor'>
               <FindDoctor></FindDoctor>
-            </Route>
+            </PrivetRoute>
             <Route path='/about'>
               <About></About>
             </Route>

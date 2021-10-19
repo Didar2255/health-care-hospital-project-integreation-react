@@ -23,10 +23,10 @@ const Header = () => {
                     <NavLink to='/services'>Services</NavLink>
                     <NavLink to='/doctor'>Find Doctor</NavLink>
                     <NavLink to='/about'>About us</NavLink>
-                    {users.email && <span>{users.displayName}</span>}
+                    {users.email && <span className='name'>{users.displayName}</span>}
                     {!users?.email ?
                         <NavLink to='/login'>Log in</NavLink> :
-                        <button onClick={hendelSignOut}>Log out</button>
+                        <button className='btn btn-danger' onClick={hendelSignOut}>Log out</button>
                     }
                 </Nav>
             </Container>
