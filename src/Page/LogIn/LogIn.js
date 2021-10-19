@@ -4,7 +4,7 @@ import useAuth from '../../Components/Hooks/useAuth';
 import './LogIn.css'
 
 const LogIn = () => {
-    const { hendelEmailChange, hendelPasswordChange, processLogIn, googleLogIn, error } = useAuth()
+    const { hendelEmailChange, hendelPasswordChange, processLogIn, googleLogIn } = useAuth()
     const location = useLocation()
     const history = useHistory()
     const redirect_uri = location.state?.from || '/home'
@@ -27,9 +27,6 @@ const LogIn = () => {
                     <div className="text-box">
                         <i class="fas fa-lock"></i>
                         <input onBlur={hendelPasswordChange} type="password" name="" id="" placeholder='User Password' />
-                    </div>
-                    <div className='text-danger'>
-                        {error}
                     </div>
                     <button className=' btn btn-danger login-button' type='submit'>Log In</button>
                     <div className="d-flex align-items-center justify-content-around">
