@@ -30,11 +30,11 @@ const Footer = () => {
                 <div className='col-md-4 col-12'>
                     <h4>Connect With us</h4>
                     <div className="social-link">
-                        <a href="/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="/"><i class="fab fa-instagram"></i></a>
-                        <a href="/"><i class="fab fa-twitter"></i></a>
-                        <a href="/"><i class="fab fa-whatsapp"></i></a>
+                        <a href="/"><i className="fab fa-facebook-f"></i></a>
+                        <a href="/"><i className="fab fa-linkedin-in"></i></a>
+                        <a href="/"><i className="fab fa-instagram"></i></a>
+                        <a href="/"><i className="fab fa-twitter"></i></a>
+                        <a href="/"><i className="fab fa-whatsapp"></i></a>
                     </div>
                     <div className='logo'>
                         <img src={logo} alt="" />

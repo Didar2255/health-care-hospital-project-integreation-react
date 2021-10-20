@@ -11,15 +11,15 @@ const Register = () => {
                 <form onSubmit={hendelRegistration}>
                     <h1>Register your Account :</h1>
                     <div className="text-box">
-                        <i class="fas fa-user"></i>
+                        <i className="fas fa-user"></i>
                         <input onBlur={hendelNameChange} type="text" name="" id="" placeholder='Enter your Name' required />
                     </div>
                     <div className="text-box">
-                        <i class="fas fa-user"></i>
+                        <i className="fas fa-user"></i>
                         <input onBlur={hendelEmailChange} type="email" name="" id="" placeholder='User Mail' required />
                     </div>
                     <div className="text-box">
-                        <i class="fas fa-lock"></i>
+                        <i className="fas fa-lock"></i>
                         <input onBlur={hendelPasswordChange} type="password" name="" id="" placeholder='User Password' />
                     </div>
                     <div className='text-danger'>

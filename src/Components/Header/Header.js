@@ -7,7 +7,7 @@ import './Header.css'
 const Header = () => {
     const { users, hendelSignOut } = useAuth()
     return (
-        <Navbar bg="dark" variant="dark" collapseOnSelect expand="md">
+        <Navbar bg="dark" sticky="top" variant="dark" collapseOnSelect expand="lg">
             <Container>
                 <Navbar.Brand className='d-flex align-items-center' href="#home">
                     <img

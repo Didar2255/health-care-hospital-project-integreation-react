@@ -23,7 +23,7 @@ const ServiceDetails = () => {
     return (
         <div className='my-5'>
             <h2 className='my-4'>Service Details </h2>
-            <p>We try provide our best service</p>
+            <p className='text-center'>We try provide our best service</p>
             <div className="d-flex align-items-center justify-content-center text-white ">
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={singleService?.serviceImg} />

@@ -2,4 +2,8 @@
     font-size: 46px;
     font-weight: 700;
     color: rgb(34,54,69);
+    margin: 24px;
+}
+p{
+    text-align: justify;
 }

@@ -17,10 +17,10 @@ const SingleService = (props) => {
                     </Card.Text>
                 </Card.Body>
                 <Link to={url}>
-                    <Button variant='btn btn-success my-3'>See Details <i class="fas fa-arrow-alt-right"></i></Button>
+                    <Button className='service-btn'>See Details</Button>
                 </Link>
             </Card>
-        </Col>
+        </Col >
     );
 };
 

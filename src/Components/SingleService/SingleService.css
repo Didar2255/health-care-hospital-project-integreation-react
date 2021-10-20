@@ -1,7 +1,16 @@
 .home-card{
     min-height: 500px;
+    background-color: rgb(201, 248, 230);
 }
 .home-card:hover{
     box-shadow: 0rem 0rem 0.5rem 0.3rem rgb(0,0,0,0.1);
     transform: scale(1.02);
+}
+.service-btn{
+    background-color: rgb(230, 52, 40);
+    border: none;
+    margin: 10px;
+}
+.service-btn:hover{
+    background-color: rgb(29, 79, 79);
 }

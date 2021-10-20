@@ -75,6 +75,9 @@ const useFirebase = () => {
     const googleLogIn = () => {
         setIsLoading(true)
         signInWithPopup(auth, googleProvider)
+            .then(result => {
+                setUsers(result.user)
+            })
             .catch(error => {
                 setError(error.message)
             })

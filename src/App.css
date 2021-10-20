@@ -2,8 +2,9 @@
 body{
   font-family: 'Poppins', sans-serif;
 }
-
-
+body{
+  background-color: rgb(247,247,249);
+}
 .App {
   text-align: center;
 }
