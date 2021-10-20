@@ -1,5 +1,4 @@
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
-
 import { useEffect, useState } from "react"
 import initializeAuthentication from "../Firebase/firebase.init";
 
@@ -23,6 +22,8 @@ const useFirebase = () => {
     const hendelPasswordChange = event => {
         setPassword(event.target.value)
     }
+
+    // create new user
     const hendelRegistration = (e) => {
         e.preventDefault()
         if (password.length < 6) {
@@ -41,6 +42,7 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false))
     }
+    // Log in section
     const processLogIn = (e) => {
         e.preventDefault()
         if (password.length < 6) {
@@ -50,7 +52,7 @@ const useFirebase = () => {
         setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                setError('')
+                setUsers('')
             })
             .catch(error => {
                 setError(error.message)
@@ -58,20 +60,26 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
 
     }
+    // Set User Name
     const setUserName = () => {
         updateProfile(auth.currentUser, { displayName: name })
             .then(result => { })
     }
+    // user mail verification
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(result => {
 
             })
     }
+    // User Password reset
+
     const hendelResetPassword = () => {
         sendPasswordResetEmail(auth, email)
             .then(result => { })
     }
+
+    // Google sing in
     const googleLogIn = () => {
         setIsLoading(true)
         signInWithPopup(auth, googleProvider)
@@ -83,6 +91,9 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false))
     }
+
+    // user state change 
+
     useEffect(() => {
         onAuthStateChanged(auth, users => {
             if (users) {
@@ -94,6 +105,8 @@ const useFirebase = () => {
             setIsLoading(false)
         })
     }, [])
+
+    // Sign out
     const hendelSignOut = () => {
         setIsLoading(true)
         signOut(auth)

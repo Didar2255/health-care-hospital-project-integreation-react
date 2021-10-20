@@ -30,7 +30,7 @@ const ServiceDetails = () => {
                     <Card.Body className='card-details'>
                         <Card.Title>{singleService?.serviceName}</Card.Title>
                         <Card.Text>
-                            <p>Daily Price : $ {singleService?.price}</p>
+                            <p className='text-center'>Daily Price : $ {singleService?.price}</p>
                         </Card.Text>
                         <Button>Appointment Now</Button><br /><br />
                         <Link to='/home'>
